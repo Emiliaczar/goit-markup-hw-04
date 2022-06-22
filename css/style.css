@@ -41,21 +41,26 @@ body {
 }
 .header-contact {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-end;
   margin-left: auto;
   font-size: 14px;
   font-weight: 500;
 }
-.header-contact-mail {
+
+.header-contact-item {
   margin-right: 50px;
 }
-.header-contact-color {
+
+.header-contact-link {
   color: var(--grey);
+  display: flex;
+  flex-wrap: nowrap;
 }
-.header-contact-tel {
-  display: list-item;
-  text-align: -webkit-match-parent;
+.header-contact-link .icon:hover {
+  fill: var(--blue);
+  color: var(--blue);
 }
 .navigation-list {
   color: var(--black);
@@ -404,13 +409,12 @@ footer {
 .left-side-footer {
   margin-right: 70px;
 }
-.mail-icon {
+.icon {
+  margin-right: 10px;
+  color: var(--grey);
   fill: var(--grey);
-  margin-right: 10px;
 }
-.tel-icon {
-  margin-right: 10px;
-}
+
 .feature-picture {
   display: flex;
   justify-content: center;
@@ -434,6 +438,7 @@ footer {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  padding-left: 32px;
 }
 .social-list-item-our-team {
   display: flex;
@@ -446,19 +451,22 @@ footer {
   margin-right: 0;
   margin-right: 10px;
   max-width: 206px;
+  fill: #afb1b8;
 }
-.social-list-item-our-team:hover:hover {
+.social-list-item-our-team:hover {
   background-color: var(--blue);
+  fill: var(--white);
+  border-radius: 50%;
+  background-color: var(--blue);
+  width: 44px;
+  height: 44px;
 }
 
 .social-list-item-icon-our-team {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
 }
-.social-list-item-icon-our-team:hover {
-  fill: var(--white);
-}
+
 .our-clients-header {
   font-family: "Roboto";
   font-style: normal;
@@ -468,11 +476,9 @@ footer {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  padding-bottom: 50px;
 }
 
-.our-clients-list-icon:hover {
-  fill: var(--blue);
-}
 .background-image {
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -493,7 +499,6 @@ footer {
 }
 .clients-list-item {
   height: 92px;
-  min-width: 170px;
 }
 .our-clients-list {
   display: flex;
@@ -501,4 +506,31 @@ footer {
 .our-clients-list-icon {
   stroke: #afb1b8;
   fill: #afb1b8;
+  width: 170px;
+}
+.clients-list-margins {
+  margin-right: 30px;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+.clients-list-margins:hover .clients-list-margins:focus {
+  fill: var(--blue);
+  color: var(--blue);
+}
+.clients-list-margins:hover svg .clients-list-margins:focus svg {
+  fill: var(--blue);
+  color: var(--blue);
+}
+.clients-list-item:hover {
+  color: var(--blue);
+}
+.our-clients-list-icon:hover {
+  color: var(--blue);
+  fill: var(--blue);
 }
